@@ -11,7 +11,7 @@
   <b>Advanced RTSP Camera Discovery and Vulnerability Assessment Tool</b>
 </p>
 
-spytruder is a high-performance RTSP camera discovery and vulnerability assessment tool written in Go. It efficiently scans and identifies vulnerable RTSP cameras across networks using various authentication methods and path combinations, with support for both targeted and internet-wide scanning capabilities.
+Spytruder is a high-performance RTSP camera discovery and vulnerability assessment tool written in Go. It efficiently scans and identifies vulnerable RTSP cameras across networks using various authentication methods and path combinations, with support for both targeted and internet-wide scanning capabilities.
 
 ## 🌟 Key Features
 
