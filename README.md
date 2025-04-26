@@ -1,4 +1,4 @@
-# 🎥 spytruder
+# 🎥 Spytruder
 
 <p align="center">
   <img src="https://img.shields.io/badge/Go-1.19+-00ADD8?style=flat-square&logo=go" alt="Go version">
