@@ -72,7 +72,7 @@ func GetGeoLocation(ip string) string {
 func DisplayBanner() {
 	fmt.Print(figure.NewFigure("     spytruder", "cybermedium", true))
 	println()
-	fmt.Printf("%s\t\t\t%sv4.0.2%s by @ALW1EZ\n", config.ColorYellow, config.ColorBold, config.ColorReset)
+	fmt.Printf("%s\t\t\t%sv4.0.3%s by @ALW1EZ\n", config.ColorYellow, config.ColorBold, config.ColorReset)
 	fmt.Printf("\t\t   %sRTSP Camera Assessment Tool%s\n", config.ColorBlue, config.ColorReset)
 	fmt.Println(config.ColorPurple + strings.Repeat("─", 67) + config.ColorReset)
 }
