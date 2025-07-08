@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"bytes"
 	"crypto/rand"
 	"encoding/json"
 	"fmt"
@@ -13,16 +14,15 @@ import (
 
 	"github.com/ALW1EZ/spytruder/v4/pkg/config"
 	"github.com/common-nighthawk/go-figure"
-	"bytes"
 )
 
 type GeoIPResponse struct {
 	City      string  `json:"city"`
 	Country   string  `json:"country"`
-	IP        string  `json:"ip"`
-	Latitude  float64 `json:"latitude"`
-	Longitude float64 `json:"longitude"`
-	State     string  `json:"state"`
+	IP        string  `json:"query"`
+	Latitude  float64 `json:"lat"`
+	Longitude float64 `json:"lon"`
+	State     string  `json:"isp"`
 }
 
 // GetGeoLocation returns the geolocation information for an IP address
@@ -32,7 +32,7 @@ func GetGeoLocation(ip string) string {
 		ip = strings.Split(ip, ":")[0]
 	}
 
-	url := fmt.Sprintf("https://api.hackertarget.com/geoip/?q=%s&output=json", ip)
+	url := fmt.Sprintf("http://ip-api.com/json/%s", ip)
 	resp, err := http.Get(url)
 	if err != nil {
 		return "Unknown Location"
@@ -54,11 +54,11 @@ func GetGeoLocation(ip string) string {
 	if geoIP.Country != "" {
 		location = append(location, geoIP.Country)
 	}
-	if geoIP.State != "" {
-		location = append(location, geoIP.State)
-	}
 	if geoIP.City != "" {
 		location = append(location, geoIP.City)
+	}
+	if geoIP.State != "" {
+		location = append(location, geoIP.State)
 	}
 
 	if len(location) == 0 {
@@ -72,7 +72,7 @@ func GetGeoLocation(ip string) string {
 func DisplayBanner() {
 	fmt.Print(figure.NewFigure("     spytruder", "cybermedium", true))
 	println()
-	fmt.Printf("%s\t\t\t%sv4.0.1%s by @ALW1EZ\n", config.ColorYellow, config.ColorBold, config.ColorReset)
+	fmt.Printf("%s\t\t\t%sv4.0.2%s by @ALW1EZ\n", config.ColorYellow, config.ColorBold, config.ColorReset)
 	fmt.Printf("\t\t   %sRTSP Camera Assessment Tool%s\n", config.ColorBlue, config.ColorReset)
 	fmt.Println(config.ColorPurple + strings.Repeat("─", 67) + config.ColorReset)
 }
@@ -212,7 +212,7 @@ func RangeToCIDR(start, end string) string {
 	}
 
 	// If start and end are the same, return as single IP
-	if bytes.Equal(startIP, endIP) {
+	if net.IP.Equal(startIP, endIP) {
 		return start
 	}
 
@@ -224,7 +224,7 @@ func RangeToCIDR(start, end string) string {
 		mask := uint32(0xFFFFFFFF) << (32 - prefix)
 		networkStart := startInt & mask
 		networkEnd := networkStart | (^mask)
-		
+
 		if networkStart == startInt && networkEnd == endInt {
 			return fmt.Sprintf("%s/%d", start, prefix)
 		}
