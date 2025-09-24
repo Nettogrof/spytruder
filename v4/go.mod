@@ -1,4 +1,4 @@
-module github.com/ALW1EZ/spytruder/v4
+module github.com/Nettogrof/spytruder/v4
 
 go 1.23.0
 
