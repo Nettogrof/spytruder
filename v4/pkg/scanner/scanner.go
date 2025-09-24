@@ -8,11 +8,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ALW1EZ/spytruder/v4/pkg/config"
-	"github.com/ALW1EZ/spytruder/v4/pkg/credentials"
-	"github.com/ALW1EZ/spytruder/v4/pkg/rtsp"
-	"github.com/ALW1EZ/spytruder/v4/pkg/utils"
-	"github.com/ALW1EZ/spytruder/v4/pkg/media"
+	"github.com/Nettogrof/spytruder/v4/pkg/config"
+	"github.com/Nettogrof/spytruder/v4/pkg/credentials"
+	"github.com/Nettogrof/spytruder/v4/pkg/rtsp"
+	"github.com/Nettogrof/spytruder/v4/pkg/utils"
+	"github.com/Nettogrof/spytruder/v4/pkg/media"
 	"github.com/projectdiscovery/gologger"
 )
 
