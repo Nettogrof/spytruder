@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ALW1EZ/spytruder/v4/pkg/config"
+	"github.com/Nettogrof/spytruder/v4/pkg/config"
 	"github.com/common-nighthawk/go-figure"
 )
 
