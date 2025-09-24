@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ALW1EZ/spytruder/v4/pkg/cli"
+	"github.com/Nettogrof/spytruder/v4/pkg/cli"
 )
 
 func main() {
