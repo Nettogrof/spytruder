@@ -33,6 +33,9 @@ var DefaultPaths = []string{
 	"/stream",
 
 	// Live stream variations
+	"/live0",
+	"/live1",
+	"/live2",
 	"/live/main",
 	"/live/sub",
 	"/live/ch0",
