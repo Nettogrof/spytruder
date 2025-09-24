@@ -10,14 +10,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ALW1EZ/spytruder/v4/pkg/config"
-	"github.com/ALW1EZ/spytruder/v4/pkg/credentials"
-	"github.com/ALW1EZ/spytruder/v4/pkg/scanner"
-	"github.com/ALW1EZ/spytruder/v4/pkg/utils"
+	"github.com/Nettogrof/spytruder/v4/pkg/config"
+	"github.com/Nettogrof/spytruder/v4/pkg/credentials"
+	"github.com/Nettogrof/spytruder/v4/pkg/scanner"
+	"github.com/Nettogrof/spytruder/v4/pkg/utils"
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/gologger/levels"
-	"github.com/ALW1EZ/spytruder/v4/pkg/ripe"
-	"github.com/ALW1EZ/spytruder/v4/pkg/media"
+	"github.com/Nettogrof/spytruder/v4/pkg/ripe"
+	"github.com/Nettogrof/spytruder/v4/pkg/media"
 )
 
 // Options represents command line options
